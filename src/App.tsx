@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./components/home";
+import NotFound from "./components/not-found";
+import NavBar from "./components/nav-bar";
+import PureCom from "./components/reactjs/pure-component-example/pure-com";
+import About from "./components/about";
+import styled from "styled-components";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" Component={Home}></Route>
+          <Route path="/about" Component={About}></Route>
+          <Route path="/pure-com" Component={PureCom}></Route>
+          <Route path="/not-found" Component={NotFound}></Route>
+        </Routes>
+      </BrowserRouter>
+      <Footer>
+        Contact us @
+        <a href="mailto:hege@example.com">mpushparaja13@gmail.com</a>
+      </Footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+const Footer = styled.div`
+  background-color: #008b8b;
+  color: #fff;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+`;
