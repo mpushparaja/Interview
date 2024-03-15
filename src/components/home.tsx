@@ -26,6 +26,9 @@ export default function Home() {
               <a href="/pure-com">Pure component</a>
             </li>
             <li>
+              <a href="/hoc">Higher order component</a>
+            </li>
+            <li>
               <a href="#">State and Props</a>
             </li>
             <li>

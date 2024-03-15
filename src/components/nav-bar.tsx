@@ -34,7 +34,7 @@ export default function NavBar() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link color-white" href="profile">
+                  <a className="nav-link color-white" href="/profile">
                     Profile
                   </a>
                 </li>

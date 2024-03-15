@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "./pure-com.module.css";
 
 export default function PureCom() {
+  const navigate = useNavigate();
+  function handleClick() {
+      navigate("/home");
+    }
   return (
     <>
       <strong style={{padding:'20px', color:"green"}}>Pure component example</strong>
@@ -15,6 +20,7 @@ export default function PureCom() {
         <mark>The syntactic representation of memoized components looks like below:</mark>
         <em>const MemoizedComponent = memo(SomeComponent, arePropsEqual?);</em>
       </p>
+      <button type="button" className="btn btn-primary" onClick={handleClick}>Back to list</button>
     </>
   );
 }

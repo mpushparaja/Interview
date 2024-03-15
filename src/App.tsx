@@ -6,6 +6,8 @@ import NavBar from "./components/nav-bar";
 import PureCom from "./components/reactjs/pure-component-example/pure-com";
 import About from "./components/about";
 import styled from "styled-components";
+import Hoc from "./components/reactjs/hoc/hoc";
+import Profile from "./components/profile";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Routes>
           <Route path="*" Component={Home}></Route>
           <Route path="/about" Component={About}></Route>
+          <Route path="/profile" Component={Profile}></Route>
           <Route path="/pure-com" Component={PureCom}></Route>
+          <Route path="/hoc" Component={Hoc}></Route>
           <Route path="/not-found" Component={NotFound}></Route>
         </Routes>
       </BrowserRouter>
