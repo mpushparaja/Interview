@@ -29,6 +29,9 @@ export default function Home() {
               <a href="/hoc">Higher order component</a>
             </li>
             <li>
+              <a href="/use-effect">useEffect</a>
+            </li>
+            <li>
               <a href="#">State and Props</a>
             </li>
             <li>

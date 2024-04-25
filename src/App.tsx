@@ -8,6 +8,7 @@ import About from "./components/about";
 import styled from "styled-components";
 import Hoc from "./components/reactjs/hoc/hoc";
 import Profile from "./components/profile";
+import { UseEffect } from "./components/reactjs/hooks/use-effect";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" Component={About}></Route>
           <Route path="/profile" Component={Profile}></Route>
           <Route path="/pure-com" Component={PureCom}></Route>
+          <Route path="/use-effect" Component={UseEffect}></Route>
           <Route path="/hoc" Component={Hoc}></Route>
           <Route path="/not-found" Component={NotFound}></Route>
         </Routes>
