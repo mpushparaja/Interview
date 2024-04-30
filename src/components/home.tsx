@@ -1,6 +1,18 @@
+import { useState } from "react";
+import { userInfo } from "./reactjs/models/user-info";
+import { DashboardContext } from "./reactjs/hooks/use-context";
+import Profile from "./profile";
+
 export default function Home() {
+  const [user] = useState<userInfo>({
+    name: "Pushparaja",
+    empId: 290345,
+  });
   return (
     <>
+      <DashboardContext.Provider value={user}>
+        <Profile />
+      </DashboardContext.Provider>
       <div>
         <strong style={{ padding: "20px", color: "green" }}>
           Javascript Basics
